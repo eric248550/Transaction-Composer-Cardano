@@ -1,0 +1,11 @@
+{
+  "root": "dist/",
+  "routes": {
+    "/**": "index.html"
+  },
+  "headers": {
+    "/dist/**": {
+      "Content-Type": "application/wasm"
+    }
+  }
+}

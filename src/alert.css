@@ -1,0 +1,100 @@
+.alert-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 1);
+  /* background: #D9FFFFFF; */
+  z-index: 9999;
+}
+.alert-modal-information {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding: 1rem;
+  width: 40rem;
+  min-height: 15rem;
+  /* background-image: url("../../img/background/pc.jpg"); */
+  background-color: #cacaca;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0.5rem;
+  white-space: pre-line;
+  text-align: center;
+}
+.alert-modal-close {
+  position: absolute;
+  top: -0.75rem;
+  right: -0.75rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+}
+
+.alert-modal-loading {
+  border: 8px solid #cacaca;
+  border-top: 8px solid black;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1.5s linear infinite;
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.alert-modal-result-amulet {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding: 1rem;
+  width: 30rem;
+  min-height: 30rem;
+  /* background-image: url("../../img/capsule/machine/result_amulet-bg.png"); */
+  background-color: #cacaca;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 0.5rem;
+  white-space: pre-line;
+  text-align: center;
+}
+
+.alert-modal-result-capsule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding: 1rem;
+  width: 30rem;
+  min-height: 30rem;
+  /* background-image: url("../../img/capsule/machine/result_capsule-bg.png"); */
+  background-color: #cacaca;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 0.5rem;
+  white-space: pre-line;
+  text-align: center;
+}
+
