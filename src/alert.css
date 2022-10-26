@@ -18,8 +18,8 @@
   flex-direction: column;
   position: relative;
   padding: 1rem;
-  width: 40rem;
-  min-height: 15rem;
+  max-width: 80%;
+  /* min-height: 15rem; */
   /* background-image: url("../../img/background/pc.jpg"); */
   background-color: #cacaca;
   background-position: center;
@@ -58,43 +58,3 @@
     transform: rotate(360deg);
   }
 }
-.alert-modal-result-amulet {
-  display: flex;
-  /* align-items: center; */
-  justify-content: center;
-  flex-direction: column;
-  position: relative;
-  padding: 1rem;
-  width: 30rem;
-  min-height: 30rem;
-  /* background-image: url("../../img/capsule/machine/result_amulet-bg.png"); */
-  background-color: #cacaca;
-
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  border-radius: 0.5rem;
-  white-space: pre-line;
-  text-align: center;
-}
-
-.alert-modal-result-capsule {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: relative;
-  padding: 1rem;
-  width: 30rem;
-  min-height: 30rem;
-  /* background-image: url("../../img/capsule/machine/result_capsule-bg.png"); */
-  background-color: #cacaca;
-
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  border-radius: 0.5rem;
-  white-space: pre-line;
-  text-align: center;
-}
-
