@@ -309,60 +309,58 @@ export default function App() {
     };
 
 
-    function handleWallet() {
-        // const url = 'https://transaction.aidev-cardano.com'
-        const url = 'http://localhost:8080';
-        const type = 'mint';
-        const ada = 2;
-        const address = 'addr1qxxnqqky920ehzv2h8vwk5qwxfgat8w3lr4h5gs0gt2660l0xk95n6u8twaz76f67jnf649fzdtffmqfyrpjf9rlj32qs845mw';
-        console.log(metadata)
-        const metadata = {
-            "HappyHopper03721": {
-                "Background": "Green",
-                "Eyes": "Red-blue",
-                "Hands": "Meat",
-                "Hat": "Cap",
-                "Mouth": "Worm",
-                "Skin": "Tribal",
-                "Wings": "None",
-                "image": "ipfs://QmYgaNbVWwgmcBxqpNmVJdch5ar4pLYzzaZYBepr6MhEmV",
-                "name": "Happy Hopper #03721",
-                "project": "Happy Hoppers Club"
-            }
-        };
-        const metadata_string = encodeURIComponent(JSON.stringify(metadata)); 
-        console.log(metadata_string)
-        // var ada = 'mainnetzPROg9q7idoA9ssVcWQMPtnawNVx0C0K'
-        var link = url + '?type=' + type + '&address=' + address + '&ada=' + ada + '&metadata=' + metadata_string
-        var width = 600
-        var height = Math.min(800, parseInt(window.outerHeight, 10))
-        var left = (parseInt(window.outerWidth, 10) / 2) - (width / 2)
-        var top = (parseInt(window.outerHeight, 10) - height) / 2
-        window.open(link, 'Delegate', 'width=' + width + ',height=' + height + ',toolbar=0,menubar=0,location=0,status=0,scrollbars=1,resizable=1,left=' + left + ',top=' + top);
-    }
+    // function handleWallet() {
+    //     // const url = 'https://transaction.aidev-cardano.com'
+    //     const url = 'http://localhost:8080';
+    //     const type = 'mint';
+    //     const ada = 2;
+    //     const address = 'addr1qxxnqqky920ehzv2h8vwk5qwxfgat8w3lr4h5gs0gt2660l0xk95n6u8twaz76f67jnf649fzdtffmqfyrpjf9rlj32qs845mw';
+    //     console.log(metadata)
+    //     const metadata = {
+    //         "HappyHopper03721": {
+    //             "Background": "Green",
+    //             "Eyes": "Red-blue",
+    //             "Hands": "Meat",
+    //             "Hat": "Cap",
+    //             "Mouth": "Worm",
+    //             "Skin": "Tribal",
+    //             "Wings": "None",
+    //             "image": "ipfs://QmYgaNbVWwgmcBxqpNmVJdch5ar4pLYzzaZYBepr6MhEmV",
+    //             "name": "Happy Hopper #03721",
+    //             "project": "Happy Hoppers Club"
+    //         }
+    //     };
+    //     const metadata_string = encodeURIComponent(JSON.stringify(metadata)); 
+    //     console.log(metadata_string)
+    //     // var ada = 'mainnetzPROg9q7idoA9ssVcWQMPtnawNVx0C0K'
+    //     var link = url + '?type=' + type + '&address=' + address + '&ada=' + ada + '&metadata=' + metadata_string
+    //     var width = 600
+    //     var height = Math.min(800, parseInt(window.outerHeight, 10))
+    //     var left = (parseInt(window.outerWidth, 10) / 2) - (width / 2)
+    //     var top = (parseInt(window.outerHeight, 10) - height) / 2
+    //     window.open(link, 'Delegate', 'width=' + width + ',height=' + height + ',toolbar=0,menubar=0,location=0,status=0,scrollbars=1,resizable=1,left=' + left + ',top=' + top);
+    // }
 
     const mainContents = () => {
         return (
             <div className="flex flex-col items-stretch">
-                <div className="flex flex-row items-stretch mb-5 text-center">
-                    {alertInformation.isDisplayed && (
-                        <AlertModal
-                        type={alertInformation.type}
-                        animateNumber={alertInformation.animateNumber}
-                        bgNumber={alertInformation.bgNumber}
-                        onClose={() =>
-                            setAlertInformation({
-                            type: "information",
-                            isDisplayed: false,
-                            content: null,
-                            })
-                        }
-                        >
-                        {alertInformation.content}
-                        </AlertModal>
-                    )}
+                {alertInformation.isDisplayed && (
+                    <AlertModal
+                    type={alertInformation.type}
+                    animateNumber={alertInformation.animateNumber}
+                    bgNumber={alertInformation.bgNumber}
+                    onClose={() =>
+                        setAlertInformation({
+                        type: "information",
+                        isDisplayed: false,
+                        content: null,
+                        })
+                    }
+                    >
+                    {alertInformation.content}
+                    </AlertModal>
+                )}
 
-                </div>
                 <div className='flex justify-center'>
                     <Select
                         className=" w-80 border-2 border-black bg-[#fac811] text-black text-center text-xl"
@@ -440,11 +438,11 @@ export default function App() {
     return (
         <div>
             <section className="sectionStyle">
-                <div className='flex justify-center'>
+                {/* <div className='flex justify-center'>
                     <button className="mx-auto button w-40" onClick={handleWallet}>
                         Link
                     </button>
-                </div>
+                </div> */}
                 <div className="flex flex-row justify-center">
                     <div className="flex flex-row justify-center w-full items-center -mt-6 max-w-screen-lg">
                         <a href={c.WEBSITE}>
